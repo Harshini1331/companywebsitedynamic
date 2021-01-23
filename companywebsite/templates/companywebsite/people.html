@@ -1,0 +1,17 @@
+{% extends "companywebsite/base.html" %}
+
+{% block content %}
+<div class="productcontent">
+    <h1>Meet Our People</h1>
+    <div class="productitems">
+        {% for people in persons %}
+        <div class="productitem">
+            <div class="itemimage">
+                <img src="{{ people.photo.url }}" alt="people image">
+            </div>
+            <div class="itemname">Designation: {{ people.designation }}</div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock  %}
